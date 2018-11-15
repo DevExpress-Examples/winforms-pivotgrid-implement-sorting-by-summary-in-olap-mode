@@ -1,3 +1,8 @@
+<!-- default file list -->
+*Files to look at*:
+
+* [Form1.cs](./CS/XtraPivotGrid_OLAPSortBySummary/Form1.cs) (VB: [Form1.vb](./VB/XtraPivotGrid_OLAPSortBySummary/Form1.vb))
+<!-- default file list end -->
 # How to implement Sorting by Summary in OLAP mode
 
 
