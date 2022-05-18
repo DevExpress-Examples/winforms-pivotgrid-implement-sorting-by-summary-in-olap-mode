@@ -23,6 +23,10 @@
         ''' the contents of this method with the code editor.
         ''' </summary>
         Private Sub InitializeComponent()
+            Dim DataSourceColumnBinding1 As DevExpress.XtraPivotGrid.DataSourceColumnBinding = New DevExpress.XtraPivotGrid.DataSourceColumnBinding()
+            Dim DataSourceColumnBinding2 As DevExpress.XtraPivotGrid.DataSourceColumnBinding = New DevExpress.XtraPivotGrid.DataSourceColumnBinding()
+            Dim DataSourceColumnBinding3 As DevExpress.XtraPivotGrid.DataSourceColumnBinding = New DevExpress.XtraPivotGrid.DataSourceColumnBinding()
+            Dim DataSourceColumnBinding4 As DevExpress.XtraPivotGrid.DataSourceColumnBinding = New DevExpress.XtraPivotGrid.DataSourceColumnBinding()
             Me.repositoryItemProgressBar1 = New DevExpress.XtraEditors.Repository.RepositoryItemProgressBar()
             Me.pivotGridControl1 = New DevExpress.XtraPivotGrid.PivotGridControl()
             Me.fieldInternetSalesAmount = New DevExpress.XtraPivotGrid.PivotGridField()
@@ -30,84 +34,96 @@
             Me.fieldCity = New DevExpress.XtraPivotGrid.PivotGridField()
             Me.fieldFiscalYear = New DevExpress.XtraPivotGrid.PivotGridField()
             Me.fieldInternetSalesAmount1 = New DevExpress.XtraPivotGrid.PivotGridField()
-            DirectCast(Me.repositoryItemProgressBar1, System.ComponentModel.ISupportInitialize).BeginInit()
-            DirectCast(Me.pivotGridControl1, System.ComponentModel.ISupportInitialize).BeginInit()
+            CType(Me.repositoryItemProgressBar1, System.ComponentModel.ISupportInitialize).BeginInit()
+            CType(Me.pivotGridControl1, System.ComponentModel.ISupportInitialize).BeginInit()
             Me.SuspendLayout()
-            ' 
-            ' repositoryItemProgressBar1
-            ' 
+            '
+            'repositoryItemProgressBar1
+            '
             Me.repositoryItemProgressBar1.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder
             Me.repositoryItemProgressBar1.DisplayFormat.FormatString = "{0}%"
             Me.repositoryItemProgressBar1.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Custom
             Me.repositoryItemProgressBar1.Name = "repositoryItemProgressBar1"
             Me.repositoryItemProgressBar1.ShowTitle = True
-            ' 
-            ' pivotGridControl1
-            ' 
-            Me.pivotGridControl1.Anchor = (CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) Or System.Windows.Forms.AnchorStyles.Left) Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles))
-            Me.pivotGridControl1.Fields.AddRange(New DevExpress.XtraPivotGrid.PivotGridField() { Me.fieldInternetSalesAmount, Me.fieldCountry, Me.fieldCity, Me.fieldFiscalYear})
+            '
+            'pivotGridControl1
+            '
+            Me.pivotGridControl1.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
+            Or System.Windows.Forms.AnchorStyles.Left) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+            Me.pivotGridControl1.Fields.AddRange(New DevExpress.XtraPivotGrid.PivotGridField() {Me.fieldInternetSalesAmount, Me.fieldCountry, Me.fieldCity, Me.fieldFiscalYear})
             Me.pivotGridControl1.Location = New System.Drawing.Point(12, 12)
             Me.pivotGridControl1.Name = "pivotGridControl1"
-            Me.pivotGridControl1.OLAPConnectionString = "provider=MSOLAP;data source=http://demos.devexpress.com/Services/OLAP/msmdpump.dl" & "l;initial catalog=""Adventure Works DW Standard Edition"";cube name=""Adventure Wor" & "ks"""
+            Me.pivotGridControl1.OLAPConnectionString = "provider=MSOLAP;data source=https://demos.devexpress.com/Services/OLAP/msmdpump.d" &
+    "ll;initial catalog=""Adventure Works DW Standard Edition"";cube name=""Adventure Wo" &
+    "rks"""
             Me.pivotGridControl1.OptionsView.ShowFilterHeaders = False
             Me.pivotGridControl1.Size = New System.Drawing.Size(587, 247)
             Me.pivotGridControl1.TabIndex = 0
-            ' 
-            ' fieldInternetSalesAmount
-            ' 
+            '
+            'fieldInternetSalesAmount
+            '
             Me.fieldInternetSalesAmount.Area = DevExpress.XtraPivotGrid.PivotArea.DataArea
             Me.fieldInternetSalesAmount.AreaIndex = 0
             Me.fieldInternetSalesAmount.Caption = "Sales"
-            Me.fieldInternetSalesAmount.FieldName = "[Measures].[Internet Sales Amount]"
+            DataSourceColumnBinding1.ColumnName = "[Measures].[Internet Sales Amount]"
+            Me.fieldInternetSalesAmount.DataBinding = DataSourceColumnBinding1
+            Me.fieldInternetSalesAmount.DisplayFolder = "Internet Sales"
             Me.fieldInternetSalesAmount.Name = "fieldInternetSalesAmount"
-            ' 
-            ' fieldCountry
-            ' 
+            '
+            'fieldCountry
+            '
             Me.fieldCountry.Area = DevExpress.XtraPivotGrid.PivotArea.ColumnArea
             Me.fieldCountry.AreaIndex = 0
             Me.fieldCountry.Caption = "Country"
-            Me.fieldCountry.FieldName = "[Customer].[Country].[Country]"
+            DataSourceColumnBinding2.ColumnName = "[Customer].[Country].[Country]"
+            Me.fieldCountry.DataBinding = DataSourceColumnBinding2
+            Me.fieldCountry.DisplayFolder = "Location"
             Me.fieldCountry.Name = "fieldCountry"
-            ' 
-            ' fieldCity
-            ' 
+            '
+            'fieldCity
+            '
             Me.fieldCity.Area = DevExpress.XtraPivotGrid.PivotArea.ColumnArea
             Me.fieldCity.AreaIndex = 1
             Me.fieldCity.Caption = "City"
-            Me.fieldCity.FieldName = "[Customer].[City].[City]"
+            DataSourceColumnBinding3.ColumnName = "[Customer].[City].[City]"
+            Me.fieldCity.DataBinding = DataSourceColumnBinding3
+            Me.fieldCity.DisplayFolder = "Location"
             Me.fieldCity.Name = "fieldCity"
-            ' 
-            ' fieldFiscalYear
-            ' 
+            '
+            'fieldFiscalYear
+            '
             Me.fieldFiscalYear.Area = DevExpress.XtraPivotGrid.PivotArea.RowArea
             Me.fieldFiscalYear.AreaIndex = 0
             Me.fieldFiscalYear.Caption = "Fiscal Year"
-            Me.fieldFiscalYear.FieldName = "[Date].[Fiscal Year].[Fiscal Year]"
+            DataSourceColumnBinding4.ColumnName = "[Date].[Fiscal Year].[Fiscal Year]"
+            Me.fieldFiscalYear.DataBinding = DataSourceColumnBinding4
+            Me.fieldFiscalYear.DisplayFolder = "Fiscal"
             Me.fieldFiscalYear.Name = "fieldFiscalYear"
-            ' 
-            ' fieldInternetSalesAmount1
-            ' 
+            '
+            'fieldInternetSalesAmount1
+            '
             Me.fieldInternetSalesAmount1.Area = DevExpress.XtraPivotGrid.PivotArea.DataArea
             Me.fieldInternetSalesAmount1.AreaIndex = 1
             Me.fieldInternetSalesAmount1.Caption = "Internet Sales Amount"
             Me.fieldInternetSalesAmount1.FieldName = "[Measures].[Internet Sales Amount]"
             Me.fieldInternetSalesAmount1.Name = "fieldInternetSalesAmount1"
-            ' 
-            ' Form1
-            ' 
-            Me.AutoScaleDimensions = New System.Drawing.SizeF(6F, 13F)
+            '
+            'Form1
+            '
+            Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
             Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
             Me.ClientSize = New System.Drawing.Size(611, 271)
             Me.Controls.Add(Me.pivotGridControl1)
             Me.Name = "Form1"
             Me.Text = "Form1"
-            DirectCast(Me.repositoryItemProgressBar1, System.ComponentModel.ISupportInitialize).EndInit()
-            DirectCast(Me.pivotGridControl1, System.ComponentModel.ISupportInitialize).EndInit()
+            CType(Me.repositoryItemProgressBar1, System.ComponentModel.ISupportInitialize).EndInit()
+            CType(Me.pivotGridControl1, System.ComponentModel.ISupportInitialize).EndInit()
             Me.ResumeLayout(False)
 
         End Sub
 
-        #End Region
+#End Region
 
         Private pivotGridControl1 As DevExpress.XtraPivotGrid.PivotGridControl
         Private fieldInternetSalesAmount As DevExpress.XtraPivotGrid.PivotGridField
