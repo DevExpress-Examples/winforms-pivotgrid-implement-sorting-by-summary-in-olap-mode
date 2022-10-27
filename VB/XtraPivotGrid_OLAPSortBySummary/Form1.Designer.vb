@@ -1,5 +1,7 @@
-﻿Namespace XtraPivotGrid_OLAPSortBySummary
-    Partial Public Class Form1
+Namespace XtraPivotGrid_OLAPSortBySummary
+
+    Partial Class Form1
+
         ''' <summary>
         ''' Required designer variable.
         ''' </summary>
@@ -10,14 +12,14 @@
         ''' </summary>
         ''' <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
         Protected Overrides Sub Dispose(ByVal disposing As Boolean)
-            If disposing AndAlso (components IsNot Nothing) Then
-                components.Dispose()
+            If disposing AndAlso (Me.components IsNot Nothing) Then
+                Me.components.Dispose()
             End If
+
             MyBase.Dispose(disposing)
         End Sub
 
-        #Region "Windows Form Designer generated code"
-
+'#Region "Windows Form Designer generated code"
         ''' <summary>
         ''' Required method for Designer support - do not modify
         ''' the contents of this method with the code editor.
@@ -30,8 +32,8 @@
             Me.fieldCity = New DevExpress.XtraPivotGrid.PivotGridField()
             Me.fieldFiscalYear = New DevExpress.XtraPivotGrid.PivotGridField()
             Me.fieldInternetSalesAmount1 = New DevExpress.XtraPivotGrid.PivotGridField()
-            DirectCast(Me.repositoryItemProgressBar1, System.ComponentModel.ISupportInitialize).BeginInit()
-            DirectCast(Me.pivotGridControl1, System.ComponentModel.ISupportInitialize).BeginInit()
+            CType((Me.repositoryItemProgressBar1), System.ComponentModel.ISupportInitialize).BeginInit()
+            CType((Me.pivotGridControl1), System.ComponentModel.ISupportInitialize).BeginInit()
             Me.SuspendLayout()
             ' 
             ' repositoryItemProgressBar1
@@ -44,8 +46,8 @@
             ' 
             ' pivotGridControl1
             ' 
-            Me.pivotGridControl1.Anchor = (CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) Or System.Windows.Forms.AnchorStyles.Left) Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles))
-            Me.pivotGridControl1.Fields.AddRange(New DevExpress.XtraPivotGrid.PivotGridField() { Me.fieldInternetSalesAmount, Me.fieldCountry, Me.fieldCity, Me.fieldFiscalYear})
+            Me.pivotGridControl1.Anchor = CType(((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) Or System.Windows.Forms.AnchorStyles.Left) Or System.Windows.Forms.AnchorStyles.Right)), System.Windows.Forms.AnchorStyles)
+            Me.pivotGridControl1.Fields.AddRange(New DevExpress.XtraPivotGrid.PivotGridField() {Me.fieldInternetSalesAmount, Me.fieldCountry, Me.fieldCity, Me.fieldFiscalYear})
             Me.pivotGridControl1.Location = New System.Drawing.Point(12, 12)
             Me.pivotGridControl1.Name = "pivotGridControl1"
             Me.pivotGridControl1.OLAPConnectionString = "provider=MSOLAP;data source=http://demos.devexpress.com/Services/OLAP/msmdpump.dl" & "l;initial catalog=""Adventure Works DW Standard Edition"";cube name=""Adventure Wor" & "ks"""
@@ -101,21 +103,25 @@
             Me.Controls.Add(Me.pivotGridControl1)
             Me.Name = "Form1"
             Me.Text = "Form1"
-            DirectCast(Me.repositoryItemProgressBar1, System.ComponentModel.ISupportInitialize).EndInit()
-            DirectCast(Me.pivotGridControl1, System.ComponentModel.ISupportInitialize).EndInit()
+            AddHandler Me.Load, New System.EventHandler(AddressOf Me.Form1_Load)
+            CType((Me.repositoryItemProgressBar1), System.ComponentModel.ISupportInitialize).EndInit()
+            CType((Me.pivotGridControl1), System.ComponentModel.ISupportInitialize).EndInit()
             Me.ResumeLayout(False)
-
         End Sub
 
-        #End Region
-
+'#End Region
         Private pivotGridControl1 As DevExpress.XtraPivotGrid.PivotGridControl
+
         Private fieldInternetSalesAmount As DevExpress.XtraPivotGrid.PivotGridField
+
         Private fieldInternetSalesAmount1 As DevExpress.XtraPivotGrid.PivotGridField
+
         Private repositoryItemProgressBar1 As DevExpress.XtraEditors.Repository.RepositoryItemProgressBar
+
         Private fieldCountry As DevExpress.XtraPivotGrid.PivotGridField
+
         Private fieldCity As DevExpress.XtraPivotGrid.PivotGridField
+
         Private fieldFiscalYear As DevExpress.XtraPivotGrid.PivotGridField
     End Class
 End Namespace
-
