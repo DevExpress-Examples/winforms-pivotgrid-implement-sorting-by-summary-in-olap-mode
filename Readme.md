@@ -8,7 +8,7 @@
 
 The following example demonstrates how to implement sorting by summary in OLAP mode. In this example, values of the _Fiscal Year_ field are sorted by the _Australia_ | _Bendigo_ column summary values.
 
-![Pivot Grid](images/pivotgrid.png)
+![Pivot Grid](image/pivotgrid.png)
 
  Two `PivotGridFieldSortCondition` objects contains OLAP members that correspond to `Australia` and `Bendigo` values. The `PivotGridControl.GetFieldValueOLAPMember`methos obtains these values. Obtained values specify columns by which the _Fiscal Year_ field should be sorted and store in the _Fiscal Year_'s `PivotGridFieldBase.SortBySummaryInfo.Conditions` collection. OLAP members can be obtained only for visible field values. For this reason, the Australia field value is expanded before initializing OLAP members in order to obtain the Bendigo OLAP member. The `PivotGridFieldBase.SortBySummaryInfo.Field` property specifies the data field whose summary values should be used to sort values of the Fiscal Year field.
 
